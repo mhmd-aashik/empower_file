@@ -3,38 +3,38 @@ import Collection from "@/components/shared/Collection";
 import Search from "@/components/shared/Search";
 import ShuffleHero from "@/components/shared/ShuffleHero";
 import { Button } from "@/components/ui/button";
-import { getAllEvents, getFourEvents } from "@/lib/actions/event.actions";
+import { getAllEvents } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Home({ searchParams }: SearchParamProps) {
-  const page: number = Number(searchParams?.page) || 1;
-  const searchText: string = (searchParams?.query as string) || "";
-  const category: string = (searchParams?.category as string) || "";
+async function Events({ searchParams }: SearchParamProps) {
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || "";
+  const category = (searchParams?.category as string) || "";
 
-  const events = await getFourEvents({
+  const events = await getAllEvents({
     query: searchText,
     category,
     page,
     limit: 6,
   });
 
+
+
   return (
     <>
-      <section className="bg-[#020617]  py-5 md:py-10">
-        <ShuffleHero />
-      </section>
-
       <section
         id="events"
         className="wrapper my-8 flex flex-col gap-8 md:gap-12"
       >
-        <div className="flex flex-between">
-          <h2 className="h2-bold">Our New Events</h2>
-          <Link href="/events">
-            <Button>Explore More</Button>
-          </Link>
+        <h2 className="h2-bold">
+          Trust by <br /> Thousands of Events
+        </h2>
+
+        <div className="flex w-full flex-col gap-5 md:flex-row">
+          <Search />
+          <CategoryFilter />
         </div>
 
         <Collection
@@ -51,4 +51,4 @@ export default async function Home({ searchParams }: SearchParamProps) {
   );
 }
 
-
+export default Events;

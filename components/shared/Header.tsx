@@ -10,7 +10,7 @@ const Header = () => {
     <header className="w-full border-b sticky bg-[#020617] top-0 z-30">
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-fit font-ds flex gap-3 items-center">
-          <p className="text-3xl font-bold">
+          <p className="text-3xl font-bold font-dancingScript">
             <span className="text-blue-500">E</span>
             <span className="text-purple-500">m</span>
             <span className="text-green-500">p</span>
@@ -22,7 +22,7 @@ const Header = () => {
             alt="Evently logo"
             className="overflow-hidden scale-[1.9]"
           />
-          <p className="text-3xl font-poppins font-bold">
+          <p className="text-3xl font-bold font-dancingScript">
             <span className="text-pink-500">w</span>
             <span className="text-yellow-500">e</span>
             <span className="text-red-500">r</span>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins,Dancing_Script} from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "./globals.css";
@@ -9,6 +9,12 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dancing-script",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${poppins.variable} bg-[#020617]/10`}>
+        <body className={`${poppins.variable} ${dancingScript.variable} bg-[#020617]/10`}>
           <Script id="tawk" strategy="lazyOnload">
             {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
