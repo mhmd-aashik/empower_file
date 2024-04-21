@@ -61,7 +61,7 @@ const About = () => {
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
-                className="md:block hidden h-36 w-36"
+                className="md:block hidden h-36 w-36 object-cover"
                 src="/assets/group/ch.jpeg"
                 alt="Olivia featured Img"
               />
