@@ -18,11 +18,8 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Evently",
-  description: "Evently is a platform for event management.",
-  icons: {
-    icon: "/assets/images/logo.svg",
-  },
+  title: "Empower",
+  description: "Empower is a platform for event management.",
 };
 
 export default function RootLayout({
