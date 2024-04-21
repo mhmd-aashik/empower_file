@@ -39,15 +39,15 @@ const EventDetails = async ({
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <div className="flex gap-3">
-                  <p className="p-bold-20 rounded-full bg-green-500/10 px-5 py-2 text-slate-500">
-                    {event.isFree ? "FREE" : `$${event.price}`}
+                  <p className="p-bold-20 rounded-full bg-green-500 px-5 py-2 text-slate-500">
+                    {event.isFree ? "FREE" : `LKR${event.price}`}
                   </p>
                   <p className="p-medium-16 rounded-full bg-grey-500/10 px-4 py-2.5 text-slate-500">
                     {event.category.name}
                   </p>
                 </div>
 
-                <p className="p-medium-18 ml-2 mt-2 sm:mt-0">
+                <p className="p-medium-18 ml-2 mt-2 sm:mt-0 text-blue-500">
                   by{" "}
                   <span className="text-white">
                     {event.organizer.firstName} {event.organizer.lastName}
