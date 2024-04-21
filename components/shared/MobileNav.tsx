@@ -17,14 +17,14 @@ const MobileNav = () => {
       <Sheet>
         <SheetTrigger className="align-middle">
           <Image 
-            src="/assets/icons/menu.svg"
+            src="/assets/icons/menuh.png"
             alt="menu"
             width={24}
             height={24}
             className="cursor-pointer"
           />
         </SheetTrigger>
-        <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
+        <SheetContent className="flex flex-col gap-6 bg-[#020617] md:hidden">
           <Image 
             src="/assets/images/logo.svg"
             alt="logo"
