@@ -183,7 +183,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                     onEditorChange={(content) => field.onChange(content)}
                     initialValue=""
                     init={{
-                      height: 350,
+                      height: 280,
                       menubar: false,
                       plugins: [
                         "advlist",
