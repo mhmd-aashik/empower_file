@@ -67,7 +67,7 @@ const About = () => {
               />
               <img
                 className="md:hidden block "
-                rc="/assets/group/ch.jpeg"
+                src="/assets/group/ch.jpeg"
                 alt="Olivia featured Img"
               />
               <p className="font-medium text-xl leading-5 uppercase text-white mt-4">
