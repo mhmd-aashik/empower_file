@@ -9,7 +9,7 @@ const CreateEvent = () => {
   return (
     <>
       <section className="bg-[#020617] py-5 md:py-10">
-        <h3 className="wrapper h3-bold text-center sm:text-left">
+        <h3 className="wrapper h3-bold text-center sm:text-left text-slate-500">
           Create Event
         </h3>
       </section>
