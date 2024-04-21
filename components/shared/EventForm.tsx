@@ -39,6 +39,10 @@ import { useRouter } from "next/navigation";
 import { createEvent, updateEvent } from "@/lib/actions/event.actions";
 import { IEvent } from "@/lib/database/models/event.model";
 
+import { useRef } from "react";
+import { Editor } from "@tinymce/tinymce-react";
+import path from "path";
+
 type EventFormProps = {
   userId: string;
   type: "Create" | "Update";
@@ -48,6 +52,7 @@ type EventFormProps = {
 
 const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   const [files, setFiles] = useState<File[]>([]);
+  const editorRef = useRef(null);
   const initialValues =
     event && type === "Update"
       ? {
@@ -77,11 +82,14 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
 
       uploadedImageUrl = uploadedImages[0].url;
     }
-
     if (type === "Create") {
       try {
         const newEvent = await createEvent({
-          event: { ...values, imageUrl: uploadedImageUrl },
+          event: {
+            ...values,
+            description: values.description,
+            imageUrl: uploadedImageUrl,
+          },
           userId,
           path: "/profile",
         });
@@ -165,10 +173,46 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl className="h-72">
-                  <Textarea
-                    placeholder="Description"
-                    {...field}
-                    className="textarea rounded-2xl"
+                  <Editor
+                    apiKey={process.env.NEXT_PUBLIC_TINY_EDITOR_API_KEY}
+                    onInit={(_evt, editor) => {
+                      // @ts-ignore
+                      editorRef.current = editor;
+                    }}
+                    onBlur={field.onBlur}
+                    onEditorChange={(content) => field.onChange(content)}
+                    initialValue=""
+                    init={{
+                      height: 350,
+                      menubar: false,
+                      plugins: [
+                        "advlist",
+                        "autolink",
+                        "lists",
+                        "link",
+                        "image",
+                        "charmap",
+                        "preview",
+                        "anchor",
+                        "searchreplace",
+                        "visualblocks",
+                        "code",
+                        "fullscreen",
+                        "insertdatetime",
+                        "media",
+                        "table",
+                        "code",
+                        "help",
+                        "wordcount",
+                      ],
+                      toolbar:
+                        "undo redo | blocks | " +
+                        "bold italic forecolor | alignleft aligncenter " +
+                        "alignright alignjustify | bullist numlist outdent indent | " +
+                        "removeformat | help",
+                      content_style:
+                        "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                    }}
                   />
                 </FormControl>
                 <FormMessage />

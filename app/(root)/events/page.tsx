@@ -17,7 +17,7 @@ async function Events({ searchParams }: SearchParamProps) {
     query: searchText,
     category,
     page,
-    limit: 6,
+    limit: 12,
   });
 
 
@@ -28,7 +28,7 @@ async function Events({ searchParams }: SearchParamProps) {
         id="events"
         className="wrapper my-8 flex flex-col gap-8 md:gap-12"
       >
-        <h2 className="h2-bold">
+        <h2 className="h2-bold text-slate-400">
           Trust by <br /> Thousands of Events
         </h2>
 
@@ -42,7 +42,7 @@ async function Events({ searchParams }: SearchParamProps) {
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
-          limit={6}
+          limit={12}
           page={page}
           totalPages={events?.totalPages}
         />

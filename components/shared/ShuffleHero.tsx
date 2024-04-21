@@ -2,11 +2,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const ShuffleHero = () => {
   return (
-    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-7xl mx-auto ">
+    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto ">
       <div className="flex flex-col items-center justify-center">
         <h3 className="text-4xl md:text-6xl text-white font-semibold text-center">
           Empower. Engage. Change Together.
@@ -15,9 +16,11 @@ const ShuffleHero = () => {
           Empower volunteers to make a meaningful impact by providing resources,
           support, and opportunities for growth...
         </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
-          Explore Events
-        </button>
+        <Link href="/events">
+          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+            Explore Events
+          </button>
+        </Link>
       </div>
       <ShuffleGrid />
     </section>
