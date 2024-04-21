@@ -52,7 +52,7 @@ const About = () => {
               />
               <img
                 className="md:hidden block"
-                src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                src="/assets/group/ij.jpg"
                 alt="Alexa featured Img"
               />
               <p className="font-medium text-xl leading-5 text-white mt-4">
@@ -67,7 +67,7 @@ const About = () => {
               />
               <img
                 className="md:hidden block "
-                src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
+                rc="/assets/group/ch.jpeg"
                 alt="Olivia featured Img"
               />
               <p className="font-medium text-xl leading-5 uppercase text-white mt-4">
@@ -82,26 +82,26 @@ const About = () => {
               />
               <img
                 className="md:hidden block"
-                src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                src="/assets/group/ha.jpeg"
                 alt="Liam featued Img"
               />
               <p className="font-medium text-xl uppercase leading-5 text-gray-800 mt-4">
-              harsha
+                harsha
               </p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
-                className="md:block hidden"
-                src="/assets/group/aa.jepg"
+                className="md:block hidden "
+                src="/assets/group/aa.jpeg"
                 alt="Elijah featured img"
               />
               <img
                 className="md:hidden block"
-                src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                src="/assets/group/aa.jpeg"
                 alt="Elijah featured img"
               />
               <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
-                Elijah
+                AASHIK
               </p>
             </div>
           </div>
