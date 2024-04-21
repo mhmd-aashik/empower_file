@@ -389,7 +389,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full ">
                 <FormControl>
-                  <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-8 py-2 bg-none ">
+                  <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-5 py-2 bg-none ">
                     <Image
                       src="/assets/icons/brain.svg"
                       alt="link"
