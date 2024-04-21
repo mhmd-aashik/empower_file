@@ -3,7 +3,6 @@ import Collection from "@/components/shared/Collection";
 import Review from "@/components/shared/Review";
 import ShuffleHero from "@/components/shared/ShuffleHero";
 import VideoSction from "@/components/shared/VideoSection";
-import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
