@@ -41,7 +41,6 @@ import { IEvent } from "@/lib/database/models/event.model";
 
 import { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import path from "path";
 
 type EventFormProps = {
   userId: string;
