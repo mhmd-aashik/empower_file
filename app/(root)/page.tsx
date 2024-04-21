@@ -1,15 +1,12 @@
 import { AccordianFAQ } from "@/components/shared/AccordianFAQ";
-import CategoryFilter from "@/components/shared/CategoryFilter";
 import Collection from "@/components/shared/Collection";
 import Review from "@/components/shared/Review";
-import Search from "@/components/shared/Search";
 import ShuffleHero from "@/components/shared/ShuffleHero";
 import VideoSction from "@/components/shared/VideoSection";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home({ searchParams }: SearchParamProps) {
