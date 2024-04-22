@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins,Dancing_Script} from "next/font/google";
+import { Poppins, Dancing_Script } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "./globals.css";
@@ -30,7 +30,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${poppins.variable} ${dancingScript.variable} bg-[#020617]/10`}>
+        <body
+          className={`${poppins.variable} ${dancingScript.variable} bg-[#020617]/10`}
+        >
           <Script id="tawk" strategy="lazyOnload">
             {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

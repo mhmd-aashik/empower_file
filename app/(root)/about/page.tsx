@@ -9,13 +9,11 @@ const About = () => {
             About Us
           </h1>
           <p className="font-normal text-base leading-6 text-slate-500 ">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum.In the first place we have granted to God, and
-            by this our present charter confirmed for us and our heirs forever
-            that the English Church shall be free, and shall have her rights
-            entire, and her liberties inviolate; and we will that it be thus
-            observed; which is apparent from
+            At Volunteer Sri Lanka, we're dedicated to making a positive impact
+            in communities across this beautiful island nation. Our mission is
+            simple yet powerful: to connect passionate volunteers like you with
+            meaningful opportunities to contribute to the well-being and
+            development of Sri Lanka.
           </p>
         </div>
         <div className="w-full lg:w-8/12 ">
@@ -33,17 +31,30 @@ const About = () => {
             Our Story
           </h1>
           <p className="font-normal text-base leading-6 text-slate-500 ">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum.In the first place we have granted to God, and
-            by this our present charter confirmed for us and our heirs forever
-            that the English Church shall be free, and shall have her rights
-            entire, and her liberties inviolate; and we will that it be thus
-            observed; which is apparent from
+            Founded by a group of local activists and international volunteers,
+            our organization emerged from a shared belief in the transformative
+            power of volunteerism. With firsthand experience of the challenges
+            faced by communities in Sri Lanka, we set out to create a platform
+            that fosters sustainable change through grassroots initiatives.
           </p>
         </div>
         <div className="w-full lg:w-8/12 lg:pt-8">
           <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+            <div className="p-4 pb-6 flex justify-center flex-col items-center ">
+              <img
+                className="md:block hidden h-36 w-36 object-cover object-top"
+                src="/assets/group/Aashik.jpg"
+                alt="Liam featued Img"
+              />
+              <img
+                className="md:hidden block"
+                src="/assets/group/Aashik.jpg"
+                alt="Liam featued Img"
+              />
+              <p className="font-medium text-xl uppercase leading-5  mt-4 text-white">
+                Aashik
+              </p>
+            </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden h-36 w-36"
@@ -85,23 +96,8 @@ const About = () => {
                 src="/assets/group/ha.jpeg"
                 alt="Liam featued Img"
               />
-              <p className="font-medium text-xl uppercase leading-5 text-gray-800 mt-4">
+              <p className="font-medium text-xl uppercase leading-5 mt-4 text-white">
                 harsha
-              </p>
-            </div>
-            <div className="p-4 pb-6 flex justify-center flex-col items-center">
-              <img
-                className="md:block hidden "
-                src="/assets/group/aa.jpeg"
-                alt="Elijah featured img"
-              />
-              <img
-                className="md:hidden block"
-                src="/assets/group/aa.jpeg"
-                alt="Elijah featured img"
-              />
-              <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
-                AASHIK
               </p>
             </div>
           </div>
